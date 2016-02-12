@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="styles/index.css"></link>
+	<title>Home</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:fieldset legend="Cadastro de Funcionários">
+			<div>
+				<p:graphicImage alt="Imagem do funcionário" />
+			</div>
+			<br />
+			<p:panelGrid columns="2">
+				<p:outputLabel value="ID:" />
+					<p:inputText />
+				<p:outputLabel value="Nome:" />
+					<p:inputText />
+				<p:outputLabel value="CPF:" />
+					<p:inputMask mask="999.999.999-999" />
+				<p:outputLabel value="RG:" />
+					<p:inputMask mask="99.999.999-99" />
+				<p:outputLabel value="PIS:" />
+					<p:inputMask mask="999.99999.99-9" />
+				<p:outputLabel value="INSS:" />
+					<p:inputMask mask="99.999.99999/99" />
+				<p:outputLabel value="Reservista:" />
+					<p:inputMask mask="999.999.9999-99" />
+				<p:outputLabel value="Data de Nascimento:" />
+					<p:inputMask mask="99/99/9999" />
+				<p:outputLabel value="Telefone:" />
+					<p:inputMask mask="(99)9999-9999" />
+				<p:outputLabel value="Celular:" />
+					<p:inputMask mask="(99)99999-9999" />
+				<p:outputLabel value="Endereço:" />
+					<p:inputText />			
+			</p:panelGrid>
+			<div>		
+				<p:selectOneRadio id="genero" value="#{radioView.generos}">
+					<f:selectItem itemLabel="Masculino"  itemValue="Masculino"/>
+					<f:selectItem itemLabel="Feminino" itemValue="Feminino" />
+				</p:selectOneRadio>
+			</div>
+			<br />
+			<p:commandButton value="Cadastrar" />
+			<p:commandButton value="Pesquisar" />
+		</p:fieldset>
+	</h:form>
+</h:body>
+</html>
